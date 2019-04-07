@@ -61,18 +61,35 @@ database.ref().on("child_added", function(childSnapshot) {
     console.log(frequency);
     console.log(firstArival);
 
+    var firstTime = moment(firstArival, "HH:mm").subtract(1, "years");
+    console.log(firstTime);
+
+    var currentTime = moment();
+    console.log("CURRENT TIME: " + moment(currentTime).format("HH:mm"));
+
+    var timeDiff = moment().diff(moment(firstTime), "minutes");
+    console.log("DIFFERENCE IN TIME: " + timeDiff);
+    console.log("FREQUENCY: " + frequency);
+
+    var remainder = timeDiff % frequency;
+    console.log(remainder);
+
+    var minTillTrain = frequency - remainder;
+    console.log("MINUTES TILL TRAIN: " + minTillTrain);
+
+    var nextTrain = moment().add(minTillTrain, "minutes");
+    console.log("ARRIVAL TIME: " + moment(nextTrain).format("HH:mm"));
+
+
     var newRow = $("<tr>").append(
         $("<td>").text(trainID),
         $("<td>").text(destination),
         $("<td>").text(frequency),
-        $("<td>").text("Next Arrival"),
-        $("<td>").text("Minutes Away")
+        $("<td>").text(moment(nextTrain).format("HH:mm")),
+        $("<td>").text(minTillTrain)
     );
 
     $("#train-table > tbody").append(newRow);
 })
 
 
-
-//var firstTime = moment(firstArival, "HH:mm").subtract(1, "years");
-//console.log(firstTime);
