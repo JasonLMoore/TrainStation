@@ -1,0 +1,51 @@
+body {
+    background-image: url(../images/4-Denver.jpg);
+    background-size: cover;
+    font-family: 'Raleway', sans-serif;
+}
+
+#jumbo {
+    visibility: hidden;
+    text-align: center
+}
+
+h1 {
+    visibility: visible;
+    font-size: 50px;
+    font-weight: bold;
+}
+
+.container {
+    padding: 10px;
+}
+
+.card {
+    border-color: royalblue;
+}
+
+.card-header {
+    background-color: royalblue;
+    font-weight: bold;
+}
+
+#table-id {
+    background-color: #D2DD2B;
+}
+
+form {
+    padding: 5px;
+}
+
+.label {
+    font-weight: bold;
+}
+
+.form-control {
+    background-color: lightblue;
+    border-color: slategrey;
+}
+
+#bttn {
+    background-color: royalblue;
+    border-color: royalblue;
+}
