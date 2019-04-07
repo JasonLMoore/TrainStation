@@ -10,6 +10,7 @@
     <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/style.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment.min.js"></script>
     <script src="https://www.gstatic.com/firebasejs/5.9.3/firebase.js"></script>
     <title>Train Arival</title>
 </head>
@@ -35,24 +36,10 @@
                 </thead>
                 <tbody>
                     <tr class="table" id="table-data">
-                        <td>1</td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                    <tr class="table" id="table-data">
-                        <td>2</td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                    <tr class="table" id="table-data">
-                        <td>3</td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
+                        <td>Big Burk</td>
+                        <td>Freemont</td>
+                        <td>30</td>
+                        <td>05:00</td>
                         <td></td>
                     </tr>
                 </tbody>
@@ -74,11 +61,11 @@
                 </div>
                 <div class="form-group">
                     <label for="firstTimeInput">First Train Time(HH:mm, Military Time)</label>
-                    <input type="number" class="form-control" id="firstTimeInput" placeholder="13:09">
+                    <input type="time" class="form-control" id="firstTimeInput" placeholder="01:30 PM">
                 </div>
                 <div class="form-group">
                     <label for="frequencyInput">Frequency (Minutes)</label>
-                    <input type="number" class="form-control" id="frequencyInput" placeholder="90">
+                    <input type="text" class="form-control" id="frequencyInput" placeholder="90">
                 </div>
 
                 <button type="submit" class="btn btn-primary" id="bttn">Submit</button>
